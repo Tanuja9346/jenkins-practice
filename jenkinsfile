@@ -1,6 +1,6 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent any
+    agent agent { node { label 'labelName' } }                                                  //any
 
     stages {
         stage('Build') {
