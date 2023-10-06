@@ -8,7 +8,7 @@ pipeline {
     //     cron('* * * * *')
     // }
     environment { 
-        USER = 'Tanuja'
+        USER = 'sivakumar'
     }                                            //any
 
     stages {
