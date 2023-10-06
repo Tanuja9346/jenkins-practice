@@ -77,7 +77,13 @@ pipeline {
             }
         }
                
-
+       stage('prod deploy')
+       when{
+        environment name: 'USER', value: 'sivakumar'
+        steps{
+            echo "deploying into prod"
+        }
+       }
     }
        post { 
           always { 
