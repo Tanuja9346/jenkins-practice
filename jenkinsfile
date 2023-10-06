@@ -1,6 +1,15 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
-     agent { node { label 'AGENT-1' } }                                               //any
+     agent { node { label 'AGENT-1' } }   
+     options {
+        timeout(time: 1, unit: 'HOURS') 
+    }
+    // triggers {
+    //     cron('* * * * *')
+    // }
+    environment { 
+        USER = 'Tanuja'
+    }                                            //any
 
     stages {
         stage('Build') {
