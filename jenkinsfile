@@ -1,9 +1,9 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
-     agent { node { label 'agent' } }   
-     options {
-         ansicolor('xterm')   
-    }
+     agent { node { label 'AGENT-01' } }   
+    //  options {
+    //      ansicolor('xterm')   
+    // }
     
       environment { 
         USER = 'sivakumar'
