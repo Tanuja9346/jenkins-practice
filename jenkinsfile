@@ -2,11 +2,12 @@
 pipeline {
      agent { node { label 'AGENT-1' } }   
      options {
+        ansicolour('Xterm')
         timeout(time: 1, unit: 'HOURS') 
     }
-    // triggers {
-    //     cron('* * * * *')
-    // }
+    triggers {
+        cron('* * * * *')
+    }
     environment { 
         USER = 'sivakumar'
     }    
@@ -17,7 +18,7 @@ pipeline {
         choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     }
-                              //any
+                              //any                             
     stages {
         stage('Build') {
             steps {
@@ -44,7 +45,7 @@ pipeline {
         }
         stage('Example') {
             environment { 
-                AN_ACCESS_KEY = credentials('ssh-auth') 
+                AN_ACCESS_KEY = credentials('ssh') 
             }
             steps {
                 sh 'printenv'
