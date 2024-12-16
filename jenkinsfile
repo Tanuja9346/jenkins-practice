@@ -2,12 +2,12 @@
 pipeline {
      agent { node { label 'agent' } }   
      options {
-        ansicolor('Xterm')
+       ansicolor('Xterm')
         
     }
-    triggers {
-        cron('* * * * *')
-    }
+    // triggers {
+    //     cron('* * * * *')
+    // }
     environment { 
         USER = 'sivakumar'
     }    
