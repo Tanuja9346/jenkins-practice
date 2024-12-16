@@ -3,7 +3,7 @@ pipeline {
      agent { node { label 'agent' } }   
      options {
         ansicolour('Xterm')
-        timeout(time: 1, unit: 'HOURS') 
+        
     }
     triggers {
         cron('* * * * *')
