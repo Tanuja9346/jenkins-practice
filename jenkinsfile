@@ -2,7 +2,7 @@
 pipeline {
      agent { node { label 'agent' } }   
      options {
-        Ansicolor('Xterm')
+        ansicolor('Xterm')
         
     }
     triggers {
