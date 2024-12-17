@@ -2,11 +2,11 @@
 pipeline{
     agent any
     stages{
-        stage("build"){
+        stage('build'){
             echo "hello from git"
         }
     }
-        stage("test"){
+        stage('test'){
             echo "testing"
         }
 }
