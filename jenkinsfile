@@ -10,7 +10,7 @@ pipeline {
      }    
       
                               //any                             
-    stages {
+      stages {
         stage('Build') {
             steps {
                 echo 'Building..'
@@ -28,12 +28,7 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-                // error 'this is failed'
-            }
-        }
+        
         
         }
         
