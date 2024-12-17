@@ -1,6 +1,6 @@
 // Jenkinsfile (Declarative Pipeline)
 pipeline {
-     agent { node { label 'AGENT-01' } }   
+     agent { node { label 'agent' } }   
     //  options {
     //      ansicolor('xterm')   
     // }
