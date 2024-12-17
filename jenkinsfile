@@ -1,44 +1,12 @@
 // Jenkinsfile (Declarative Pipeline)
-pipeline {
-     agent { node { label 'agent' } }   
-    //  options {
-    //      ansicolor('xterm')   
-    // }
-    
-      environment { 
-        USER = 'sivakumar'
-     }    
-      
-                              //any                             
-      stages {
-        stage('Build') {
-            steps {
-                echo 'Building..'
-                
-            }
+pipeline{
+    agent any
+    stages{
+        stage("build"){
+            echo "hello from git"
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        
-        
-        }
-        
-               
-       
-       
     }
-       post { 
-          always { 
-            echo 'i will always run whether job is not'
+        stage("test"){
+            echo "testing"
         }
-        success {
-            echo 'i will run only job is sucess'
-        }
-        failure {
-            echo 'i will run when failure'
-        }
-       }
-
+}
